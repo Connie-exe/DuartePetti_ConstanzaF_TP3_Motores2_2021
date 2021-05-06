@@ -16,7 +16,7 @@ public class Controller_Player : MonoBehaviour
     private BoxCollider col;
 
     public LayerMask floor;
-
+    
     internal RaycastHit leftHit,rightHit,downHit;
 
     public float distanceRay,downDistanceRay;
@@ -29,6 +29,7 @@ public class Controller_Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
         rb.constraints = RigidbodyConstraints.FreezePositionX| RigidbodyConstraints.FreezePositionZ|RigidbodyConstraints.FreezeRotation;
+        //Light myLight = _light.GetComponent("Light");
     }
 
     public virtual void FixedUpdate()

@@ -27,5 +27,11 @@ public class PoisonedWater : MonoBehaviour
             //transform.gameObject.layer = 13;//el layer de este objeto cambia a 13
             this.GetComponent<MeshRenderer>().material = poisonedWater;//el material de este objeto cambia a colorzombie
         }
+        if (collision.gameObject.CompareTag("Potion"))//si el objeto colisiona con otro objeto de etiqueta zombie bullet
+        {
+            Debug.Log("Now the water is cured");//se escribe en consola que ahora es poisoned
+            transform.gameObject.tag = "Water";//la etiqueta de este objeto cambia a PoisonedWater
+            //transform.gameObject.layer = 13;//el layer de este objeto cambia a 13
+        }
     }
 }
